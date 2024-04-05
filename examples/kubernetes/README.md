@@ -30,22 +30,17 @@ provider "proxmox" {
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 0.51.1 |
+No providers.
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_k8s"></a> [k8s](#module\_k8s) | ../../modules/proxmox-kubernetes | n/a |
-| <a name="module_ubuntu_img"></a> [ubuntu\_img](#module\_ubuntu\_img) | ../../modules/proxmox-cloud-image | n/a |
+| <a name="module_proxmox_lab"></a> [proxmox\_lab](#module\_proxmox\_lab) | ../.. | n/a |
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [proxmox_virtual_environment_cluster_options.options](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_cluster_options) | resource |
+No resources.
 
 ## Inputs
 

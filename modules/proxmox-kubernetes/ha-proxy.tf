@@ -1,6 +1,3 @@
-locals {
-}
-
 resource "proxmox_virtual_environment_vm" "ha_proxy" {
   vm_id     = var.vm_id + 100
   name      = "ha-proxy"
@@ -40,9 +37,9 @@ resource "proxmox_virtual_environment_vm" "ha_proxy" {
 
   disk {
     datastore_id = "nvme"
-    file_id      = var.cloud_image_file_id
-    interface    = "virtio0"
-    iothread     = true
+    file_id      = module.ubuntu_img.file_id
+    interface    = "scsi0"
+    ssd          = true
     discard      = "on"
     size         = 8
   }

@@ -19,6 +19,13 @@ locals {
   )
 }
 
+module "ubuntu_img" {
+  source = "../proxmox-cloud-image"
+
+  file_name = "jammy-server-cloudimg-amd64.img"
+  url       = "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img"
+}
+
 resource "local_sensitive_file" "ssh_private_key" {
   filename        = "${path.cwd}/ssh/id_rsa"
   content         = tls_private_key.ssh_private_key.private_key_pem
@@ -49,11 +56,11 @@ resource "proxmox_virtual_environment_vm" "this" {
   node_name = var.node_name
 
   cpu {
-    cores = var.cpu
+    cores = each.value.worker ? var.worker_cpu : var.cp_cpu
   }
 
   memory {
-    dedicated = var.memory
+    dedicated = each.value.worker ? var.worker_memory : var.cp_memory
   }
 
   initialization {
@@ -82,9 +89,9 @@ resource "proxmox_virtual_environment_vm" "this" {
 
   disk {
     datastore_id = "nvme"
-    file_id      = var.cloud_image_file_id
-    interface    = "virtio0"
-    iothread     = true
+    file_id      = module.ubuntu_img.file_id
+    interface    = "scsi0"
+    ssd          = true
     discard      = "on"
     size         = 32
   }
@@ -125,12 +132,12 @@ data "template_file" "cloud_config" {
     fqdn                    = each.value.name
     index                   = each.key
     ssh_public_key          = trimspace(tls_private_key.ssh_private_key.public_key_openssh)
+    worker                  = each.value.worker
     kubeadm_cp_endpoit      = "192.168.2.169:6443"
     kubeadm_token           = "${random_string.token_id.result}.${random_string.token_secret.result}"
     kubeadm_certificate_key = random_bytes.kubeadm_certificate_key.hex
     # openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex
     kubeadm_discovery_token_ca_cert_hash = ""
-    worker                               = each.value.worker
   }
 }
 

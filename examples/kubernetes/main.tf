@@ -1,28 +1,24 @@
-resource "proxmox_virtual_environment_cluster_options" "options" {
-  language   = "en"
-  keyboard   = "fr"
-  email_from = "notset@todo.com"
+module "proxmox_lab" {
+  source = "../.."
+
   mac_prefix = "BC:24:11"
-  console    = "xtermjs"
-}
 
-module "ubuntu_img" {
-  source = "../../modules/proxmox-cloud-image"
+  kubernetes = {
+    enabled = true
 
-  file_name = "jammy-server-cloudimg-amd64.img"
-  url       = "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img"
-}
+    vm_name_prefix = "k8s"
+    vm_start_id    = 8000
 
-module "k8s" {
-  source = "../../modules/proxmox-kubernetes"
+    control_plane = {
+      count  = 3
+      cpu    = 2
+      memory = 2048
+    }
 
-  cp_count       = 3
-  worker_count   = 3
-  vm_id          = 8000
-  vm_name_prefix = "k8s"
-
-  cpu    = 2
-  memory = 2048
-
-  cloud_image_file_id = module.ubuntu_img.file_id
+    worker = {
+      count  = 3
+      cpu    = 2
+      memory = 2048
+    }
+  }
 }

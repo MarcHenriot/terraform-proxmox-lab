@@ -1,9 +1,3 @@
-
-variable "cloud_image_file_id" {
-  type        = string
-  description = "The cloud image file ID"
-}
-
 variable "vm_id" {
   type        = number
   description = "The VM ID"
@@ -34,15 +28,27 @@ variable "node_name" {
   default     = "pve"
 }
 
-variable "cpu" {
+variable "cp_cpu" {
   type        = number
-  description = "The number of CPUs"
+  description = "The number of CPUs for the controle plane"
   default     = 2
 }
 
-variable "memory" {
+variable "cp_memory" {
   type        = number
-  description = "The amount of memory"
+  description = "The amount of memory for the controle plane"
+  default     = 2048
+}
+
+variable "worker_cpu" {
+  type        = number
+  description = "The number of CPUs for the worker"
+  default     = 2
+}
+
+variable "worker_memory" {
+  type        = number
+  description = "The amount of memory for the worker"
   default     = 2048
 }
 
