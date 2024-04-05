@@ -14,11 +14,11 @@ Welcome to the Proxmox Lab repository! This module is designed to help you set u
 
 ## Sub-Modules
 
-### Kubernetes
+### [Kubernetes](https://github.com/MarcHenriot/terraform-proxmox-lab/blob/main/modules/proxmox-kubernetes/README.md)
 
 The Kubernetes sub-module enables you to create a highly available Kubernetes cluster complete with an HAProxy load balancer.
 
-### Cloud Images
+### [Cloud Images](https://github.com/MarcHenriot/terraform-proxmox-lab/blob/main/modules/proxmox-cloud-image/README.md)
 
 The Cloud Images sub-module simplifies the process of downloading and storing cloud images directly to your Proxmox server.
 
