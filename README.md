@@ -2,6 +2,16 @@
 
 Welcome to the Proxmox Lab repository! This module is designed to help you set up your lab environment on a Proxmox server with ease.
 
+## Disclaimer
+
+**Important Note:** This project is currently under active development and is subject to significant changes. It is **not suitable for use with critical or important data**. Use it at your own risk.
+
+### What You Should Know
+
+- The codebase may undergo frequent updates, bug fixes, and enhancements.
+- Features, APIs, and behavior may change without prior notice.
+- I recommend using this project for experimentation, learning, or non-critical purp
+
 ## Sub-Modules
 
 ### Kubernetes
