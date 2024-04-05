@@ -76,8 +76,6 @@ packages:
 - haproxy
 - firewalld
 runcmd:
-- swapoff -a
-- apt-mark hold kubelet kubeadm kubectl
 - timedatectl set-timezone America/Toronto
 - systemctl enable qemu-guest-agent
 - systemctl start qemu-guest-agent
