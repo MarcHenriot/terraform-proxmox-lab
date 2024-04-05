@@ -120,7 +120,7 @@ resource "random_bytes" "kubeadm_certificate_key" {
 data "template_file" "cloud_config" {
   for_each = local.k8s_nodes_map
 
-  template = file("${path.module}/cloud-init/kubernetes/control-plane.yaml.tpl")
+  template = file("${path.module}/cloud-init/kubernetes-node.yaml.tpl")
   vars = {
     fqdn                    = each.value.name
     index                   = each.key

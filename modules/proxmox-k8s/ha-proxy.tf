@@ -49,7 +49,7 @@ resource "proxmox_virtual_environment_vm" "ha_proxy" {
 }
 
 data "template_file" "ha_proxy" {
-  template = file("${path.module}/cloud-init/ha-proxy/ha-proxy.yaml.tpl")
+  template = file("${path.module}/cloud-init/ha-proxy.yaml.tpl")
   vars = {
     vm_name_prefix = "ha-proxy"
     ssh_public_key = trimspace(tls_private_key.ssh_private_key.public_key_openssh)
