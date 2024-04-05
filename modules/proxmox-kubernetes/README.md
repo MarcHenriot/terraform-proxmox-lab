@@ -5,7 +5,7 @@
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.7.0 |
 | <a name="requirement_local"></a> [local](#requirement\_local) | 2.5.1 |
-| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | 0.49.0 |
+| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | 0.51.1 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | 3.6.0 |
 | <a name="requirement_template"></a> [template](#requirement\_template) | 2.2.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.5 |
@@ -15,7 +15,7 @@
 | Name | Version |
 |------|---------|
 | <a name="provider_local"></a> [local](#provider\_local) | 2.5.1 |
-| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 0.49.0 |
+| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 0.51.1 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.6.0 |
 | <a name="provider_template"></a> [template](#provider\_template) | 2.2.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 4.0.5 |
@@ -30,10 +30,10 @@ No modules.
 |------|------|
 | [local_sensitive_file.ssh_private_key](https://registry.terraform.io/providers/hashicorp/local/2.5.1/docs/resources/sensitive_file) | resource |
 | [local_sensitive_file.ssh_public_key](https://registry.terraform.io/providers/hashicorp/local/2.5.1/docs/resources/sensitive_file) | resource |
-| [proxmox_virtual_environment_file.cloud_config](https://registry.terraform.io/providers/bpg/proxmox/0.49.0/docs/resources/virtual_environment_file) | resource |
-| [proxmox_virtual_environment_file.ha_proxy](https://registry.terraform.io/providers/bpg/proxmox/0.49.0/docs/resources/virtual_environment_file) | resource |
-| [proxmox_virtual_environment_vm.ha_proxy](https://registry.terraform.io/providers/bpg/proxmox/0.49.0/docs/resources/virtual_environment_vm) | resource |
-| [proxmox_virtual_environment_vm.this](https://registry.terraform.io/providers/bpg/proxmox/0.49.0/docs/resources/virtual_environment_vm) | resource |
+| [proxmox_virtual_environment_file.cloud_config](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_file) | resource |
+| [proxmox_virtual_environment_file.ha_proxy](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_file) | resource |
+| [proxmox_virtual_environment_vm.ha_proxy](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_vm) | resource |
+| [proxmox_virtual_environment_vm.this](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_vm) | resource |
 | [random_bytes.kubeadm_certificate_key](https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/bytes) | resource |
 | [random_password.root](https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/password) | resource |
 | [random_string.token_id](https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/string) | resource |
