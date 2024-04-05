@@ -1,4 +1,4 @@
-VM_MODULE=module.k8s_cp
+VM_MODULE=module.k8s
 
 .PHONY: destroy-vm ssh
 

@@ -1,2 +1,2 @@
 0583e639e8bb4696ab81b39bbab29dc36dac74e2:modules/proxmox-k8s/cloud-init/kubernetes/control-plane.yaml.tpl:generic-api-key:17
-0583e639e8bb4696ab81b39bbab29dc36dac74e2:examples/k8s/README.md:hashicorp-tf-password:18
+examples/kubernetes/README.md:hashicorp-tf-password:18

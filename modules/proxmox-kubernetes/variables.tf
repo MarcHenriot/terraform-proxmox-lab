@@ -1,16 +1,19 @@
+
+variable "cloud_image_file_id" {
+  type        = string
+  description = "The cloud image file ID"
+}
+
 variable "vm_id" {
   type        = number
   description = "The VM ID"
+  default     = 8000
 }
 
 variable "vm_name_prefix" {
   type        = string
   description = "The VM name"
-}
-
-variable "cloud_image_file_id" {
-  type        = string
-  description = "The cloud image file ID"
+  default     = "k8s"
 }
 
 variable "cp_count" {
@@ -34,11 +37,13 @@ variable "node_name" {
 variable "cpu" {
   type        = number
   description = "The number of CPUs"
+  default     = 2
 }
 
 variable "memory" {
   type        = number
   description = "The amount of memory"
+  default     = 2048
 }
 
 variable "root_password_length" {

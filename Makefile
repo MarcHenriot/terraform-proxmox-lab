@@ -1,16 +1,17 @@
-SHELL=/bin/bash
+.PHONY: pc-run pc-install pc-update fix-terraform-lint gen-doc
 
-.PHONY: lint leaks fmt gen-doc
 
-lint:
-	@tflint --recursive
+pc-run:
+	@pre-commit run --all-files
 
-leaks:
-	@docker pull ghcr.io/gitleaks/gitleaks:latest
-	@docker run -v $(shell pwd):/path ghcr.io/gitleaks/gitleaks:latest detect --source="/path" -v
+pc-install:
+	@pre-commit install
 
-fmt:
-	@terraform fmt -recursive -write=true .
+pc-update:
+	@pre-commit autoupdate
+
+fix-terraform-lint:
+	@tflint --recursive --fix
 
 gen-doc:
 	@terraform-docs markdown table --output-file README.md . --recursive

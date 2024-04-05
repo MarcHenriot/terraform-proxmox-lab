@@ -13,8 +13,8 @@ module "ubuntu_img" {
   url       = "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img"
 }
 
-module "k8s_cp" {
-  source = "../../modules/proxmox-k8s"
+module "k8s" {
+  source = "../../modules/proxmox-kubernetes"
 
   cp_count       = 3
   worker_count   = 3
