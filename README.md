@@ -47,17 +47,18 @@ The Cloud Images sub-module simplifies the process of downloading and storing cl
 | Name | Type |
 |------|------|
 | [proxmox_virtual_environment_cluster_options.options](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_cluster_options) | resource |
+| [proxmox_virtual_environment_time.node_time](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_time) | resource |
+| [proxmox_virtual_environment_nodes.nodes](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/data-sources/virtual_environment_nodes) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_console"></a> [console](#input\_console) | Console viewer | `string` | `"xtermjs"` | no |
-| <a name="input_email_from"></a> [email\_from](#input\_email\_from) | email address to send notification | `string` | `"notset@todo.com"` | no |
 | <a name="input_keyboard"></a> [keyboard](#input\_keyboard) | Keyboard layout | `string` | `"fr"` | no |
 | <a name="input_kubernetes"></a> [kubernetes](#input\_kubernetes) | Kubernetes configuration | <pre>object({<br>    enabled        = bool<br>    vm_name_prefix = string<br>    vm_start_id    = number<br>    control_plane = object({<br>      count  = number<br>      cpu    = number<br>      memory = number<br>    })<br>    worker = object({<br>      count  = number<br>      cpu    = number<br>      memory = number<br>    })<br>  })</pre> | n/a | yes |
 | <a name="input_language"></a> [language](#input\_language) | GUI language | `string` | `"en"` | no |
-| <a name="input_mac_prefix"></a> [mac\_prefix](#input\_mac\_prefix) | MAC prefix | `string` | n/a | yes |
+| <a name="input_time_zone"></a> [time\_zone](#input\_time\_zone) | Time zone | `string` | `"America/Montreal"` | no |
 
 ## Outputs
 

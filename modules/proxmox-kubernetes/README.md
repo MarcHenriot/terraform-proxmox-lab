@@ -15,7 +15,7 @@
 | Name | Version |
 |------|---------|
 | <a name="provider_local"></a> [local](#provider\_local) | 2.5.1 |
-| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 0.49.0 |
+| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 0.51.1 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.6.0 |
 | <a name="provider_template"></a> [template](#provider\_template) | 2.2.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 4.0.5 |

@@ -1,9 +1,16 @@
+data "proxmox_virtual_environment_nodes" "nodes" {}
+
 resource "proxmox_virtual_environment_cluster_options" "options" {
-  language   = var.language
-  keyboard   = var.keyboard
-  email_from = var.email_from
-  mac_prefix = var.mac_prefix
-  console    = var.console
+  language = var.language
+  keyboard = var.keyboard
+  console  = var.console
+}
+
+resource "proxmox_virtual_environment_time" "node_time" {
+  for_each = toset(data.proxmox_virtual_environment_nodes.nodes.names)
+
+  node_name = each.value
+  time_zone = var.time_zone
 }
 
 module "kubernetes" {

@@ -1,7 +1,3 @@
-variable "mac_prefix" {
-  type        = string
-  description = "MAC prefix"
-}
 
 variable "language" {
   type        = string
@@ -15,16 +11,16 @@ variable "keyboard" {
   description = "Keyboard layout"
 }
 
-variable "email_from" {
-  type        = string
-  default     = "notset@todo.com"
-  description = "email address to send notification"
-}
-
 variable "console" {
   type        = string
   default     = "xtermjs"
   description = "Console viewer"
+}
+
+variable "time_zone" {
+  type        = string
+  default     = "America/Montreal"
+  description = "Time zone"
 }
 
 variable "kubernetes" {

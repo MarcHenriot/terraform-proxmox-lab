@@ -1,10 +1,8 @@
 module "proxmox_lab" {
   source = "../.."
 
-  mac_prefix = "BC:24:11"
-
   kubernetes = {
-    enabled = true
+    enabled = false
 
     vm_name_prefix = "k8s"
     vm_start_id    = 8000
