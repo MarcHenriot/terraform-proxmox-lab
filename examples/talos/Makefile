@@ -10,5 +10,10 @@ ssh-cp:
 	@ssh ubuntu@192.168.2.170 -i ssh/id_rsa
 
 ssh-ha:
+	@ssh-keygen -f "/home/marc/.ssh/known_hosts" -R "192.168.2.169"
+	@ssh ubuntu@192.168.2.169
+	# @ssh ubuntu@192.168.2.169 -i ssh/id_rsa
+
+ssh-halp:
 	@ssh-keygen -f "/home/marc/.ssh/known_hosts" -R "192.168.2.180"
 	@ssh ubuntu@192.168.2.180 -i ssh/id_rsa

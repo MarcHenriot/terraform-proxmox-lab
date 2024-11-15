@@ -28,37 +28,23 @@ The Cloud Images sub-module simplifies the process of downloading and storing cl
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.7.0 |
-| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | 0.51.1 |
+| <a name="requirement_proxmox"></a> [proxmox](#requirement\_proxmox) | >= 0.66.3 |
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_proxmox"></a> [proxmox](#provider\_proxmox) | 0.51.1 |
+No providers.
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_kubernetes"></a> [kubernetes](#module\_kubernetes) | ./modules/proxmox-kubernetes | n/a |
+No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [proxmox_virtual_environment_cluster_options.options](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_cluster_options) | resource |
-| [proxmox_virtual_environment_time.node_time](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/resources/virtual_environment_time) | resource |
-| [proxmox_virtual_environment_nodes.nodes](https://registry.terraform.io/providers/bpg/proxmox/0.51.1/docs/data-sources/virtual_environment_nodes) | data source |
+No resources.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_console"></a> [console](#input\_console) | Console viewer | `string` | `"xtermjs"` | no |
-| <a name="input_keyboard"></a> [keyboard](#input\_keyboard) | Keyboard layout | `string` | `"fr"` | no |
-| <a name="input_kubernetes"></a> [kubernetes](#input\_kubernetes) | Kubernetes configuration | <pre>object({<br>    enabled        = bool<br>    vm_name_prefix = string<br>    vm_start_id    = number<br>    control_plane = object({<br>      count  = number<br>      cpu    = number<br>      memory = number<br>    })<br>    worker = object({<br>      count  = number<br>      cpu    = number<br>      memory = number<br>    })<br>  })</pre> | n/a | yes |
-| <a name="input_language"></a> [language](#input\_language) | GUI language | `string` | `"en"` | no |
-| <a name="input_time_zone"></a> [time\_zone](#input\_time\_zone) | Time zone | `string` | `"America/Montreal"` | no |
+No inputs.
 
 ## Outputs
 

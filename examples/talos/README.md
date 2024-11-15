@@ -1,15 +1,10 @@
 # Connect to Proxmox
 
-```hcl
-provider "proxmox" {
-  endpoint  = "https://xxx.xxx.xxx.xxx:8006/"
-  insecure  = true
-}
-```
-
 ```bash
+export PROXMOX_VE_ENDPOINT="https://$HOST:8006/api2/json"
 export PROXMOX_VE_USERNAME="username@realm"
 export PROXMOX_VE_PASSWORD="CHANGE_ME"
+export PROXMOX_VE_INSECURE=true
 ```
 
 <!-- BEGIN_TF_DOCS -->

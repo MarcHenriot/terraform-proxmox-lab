@@ -4,23 +4,23 @@ terraform {
   required_providers {
     proxmox = {
       source  = "bpg/proxmox"
-      version = "0.51.1"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "3.6.0"
+      version = "~> 0"
     }
     tls = {
       source  = "hashicorp/tls"
-      version = "4.0.5"
+      version = "~> 4"
     }
     local = {
       source  = "hashicorp/local"
-      version = "2.5.1"
+      version = "~> 2"
     }
     template = {
       source  = "hashicorp/template"
-      version = "2.2.0"
+      version = "~> 2"
+    }
+    talos = {
+      source  = "siderolabs/talos"
+      version = "~> 0"
     }
   }
 }
